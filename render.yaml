@@ -1,10 +1,7 @@
-# Render Deployment Configuration
+services:
+  - type: web
+    name: ruleta
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
 
-[build]
-  command = "pip install -r requirements.txt"
-
-[service]
-  type = "web"
-  env = "python"
-  buildCommand = "pip install -r requirements.txt"
-  startCommand = "gunicorn app:app"
