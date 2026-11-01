@@ -1,0 +1,32 @@
+{
+  "personas": [
+    "Diego",
+    "Darcy",
+    "Angela",
+    "Ruth",
+    "Yeison",
+    "Santiago",
+    "Estefanny",
+    "Maria Karen"
+  ],
+  "items": [
+    "empanadas",
+    "cervezas",
+    "tamales",
+    "papa rellena",
+    "papas de bolsa grande",
+    "jugo y gaseosa",
+    "masmelos y bombones",
+    "frutas"
+  ],
+  "asignaciones": {
+    "Diego": "jugo y gaseosa",
+    "Estefanny": "papa rellena",
+    "Santiago": "frutas",
+    "Angela": "tamales",
+    "Ruth": "masmelos y bombones",
+    "Maria Karen": "papas de bolsa grande",
+    "Yeison": "empanadas",
+    "Darcy": "cervezas"
+  }
+}

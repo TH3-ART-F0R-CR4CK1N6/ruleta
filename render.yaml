@@ -1,0 +1,10 @@
+# Render Deployment Configuration
+
+[build]
+  command = "pip install -r requirements.txt"
+
+[service]
+  type = "web"
+  env = "python"
+  buildCommand = "pip install -r requirements.txt"
+  startCommand = "gunicorn app:app"

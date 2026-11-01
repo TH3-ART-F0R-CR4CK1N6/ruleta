@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Compartir Navideña</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="title-icon">🎄</span>
+                    Ruleta Navideña
+                    <span class="title-icon">🎅</span>
+                </h1>
+                <p class="subtitle">Sistema de Asignación Inteligente</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Input Panels -->
+            <div class="input-section">
+                <!-- Personas Panel -->
+                <div class="panel panel-personas">
+                    <div class="panel-header">
+                        <h2>Participantes</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="input-group">
+                            <input type="text" id="inputPersona" placeholder="Nombre de la persona" class="input-field">
+                            <button onclick="agregarPersona()" class="btn btn-add">Agregar</button>
+                        </div>
+                        <ul id="listaPersonas" class="list"></ul>
+                    </div>
+                </div>
+
+                <!-- Items Panel -->
+                <div class="panel panel-items">
+                    <div class="panel-header">
+                        <h2>Items para llevar</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="input-group">
+                            <input type="text" id="inputItem" placeholder="Item a llevar" class="input-field">
+                            <button onclick="agregarItem()" class="btn btn-add">Agregar</button>
+                        </div>
+                        <ul id="listaItems" class="list"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ruleta Section -->
+            <div class="ruleta-section">
+                <button onclick="girarRuleta()" id="btnGirar" class="btn-girar">
+                    <span class="btn-icon">🎰</span>
+                    <span>Girar Ruleta Mágica</span>
+                    <span class="btn-icon">🎰</span>
+                </button>
+                <canvas id="canvasRuleta" width="900" height="200"></canvas>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <div class="panel panel-results">
+                    <div class="panel-header">
+                        <h2>Asignaciones</h2>
+                        <button onclick="limpiarAsignaciones()" class="btn btn-clear">Limpiar</button>
+                    </div>
+                    <div class="panel-body">
+                        <div id="resultados" class="results-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
